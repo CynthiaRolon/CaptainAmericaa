@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+} 
+body{
+    background-color: #333;
+}
+.container{
+    width: 1199px;
+    height: 900px;
+    margin: 0 auto;
+
+    background-image:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5) ) ,url(../img/lal.jpg);
+    background-size: cover;
+}
+nav{
+  display: flex;
+  height: 80px;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px 0 100px;
+  flex-wrap: wrap;
+}
+nav .logo{
+  color: #fff;
+  font-size: 35px;
+  font-weight: 600;
+}
+nav ul{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+nav ul li{
+  margin: 0 5px;
+}
+nav ul li a{
+  color: #f2f2f2;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+nav ul li a.active,
+nav ul li a:hover{
+  color: #fff;
+  background: rgb(1, 38, 107);
+}
+nav .menu-btn i{
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+input[type="checkbox"]{
+  display: none;
+}
+main{
+    width: 80%;
+    height: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.logo-captain{
+    width: 400px;
+    height: 200px;
+    object-fit: cover;
+}
+.logo-captain img{
+    width: 100%;
+}
+.trailer div{
+    display: flex;
+    gap: 2rem;
+}
+.trailer-one, .trailer-two{
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    border: 1px solid #fff;
+    transition: .5s;
+}
+.trailer-one:hover{
+    background-color: #fff;
+    color: #333;
+    transition: .5s;
+
+}
+.trailer-two{
+    background-color: #fff;
+    color: #333;
+    transition: .5s;
+
+}
+.trailer-two:hover{
+    background-color: transparent;
+    transition: .5s;
+
+    color: #fff;
+}
+.trailer-text{
+    margin-top: 1rem;
+    color: #fff;
+    line-height: 2;
+}
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+}
+footer .iconos{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.marvel{
+    width: 80px;
+}
+.uces{
+    width: 80px;
+}
+
+footer .name p{
+    color: #fff;
+    font-weight: 600;
+}
+
+
+
+
+
+.sectionPersonajes h2, .escenas h2,.formulario h2{
+    color: #fff;
+    text-align: center;
+}
+.containerPersonajes{
+    display: grid;
+    margin: 1rem auto;
+    width: 50%;
+    gap: 15px;
+
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+.containerPersonajes div p{
+    color: #fff;
+}
+.escenas{
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.parrafo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+.text{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+.container-escenas{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+
+
+
+
+
+
+.formulario{
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formulario form{
+    display: flex;
+    flex-direction: column;
+}
+.formulario div{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+}
+.formulario div label{
+    color: #fff;
+}
+.formulario div input{
+    padding: 10px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    outline: none;
+    background: none;
+    color: #fff;
+}
+.formulario select{
+    padding: 10px;
+    background: none ;
+    color: #fff;
+}
+.formulario textarea{
+    color: #fff;
+    background: none ;
+}
+.formulario .botones{
+    margin-top: .8rem;
+}
+
+.btn{
+    cursor: pointer;
+
+}
+
+
+@media (max-width: 992px) {
+  nav .menu-btn i{
+    display: block;
+  }
+  #click:checked ~ .menu-btn i:before{
+    content: "\f00d";
+  }
+  nav ul{
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    background: #111;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  #click:checked ~ ul{
+    left: 0;
+  }
+  nav ul li{
+    width: 100%;
+    margin: 40px 0;
+  }
+  nav ul li a{
+    width: 100%;
+    margin-left: -100%;
+    display: block;
+    font-size: 20px;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  #click:checked ~ ul li a{
+    margin-left: 0px;
+  }
+  nav ul li a.active,
+  nav ul li a:hover{
+    background: none;
+    color: rgb(1, 38, 107);
+  }
+  .container{
+    width: 100vw;
+  }
+  .logo-captain{
+    width: 300px;
+    }
+    main{
+        justify-content: flex-start;
+    }
+    footer{
+        flex-direction: column;
+    }
+    .disney{
+        display: none;
+    } 
+    .container{
+        background-position: center;
+    } 
+    .containerPersonajes{
+        width: 50%;
+        grid-template-columns: repeat(2, 1fr);
+    }  
+    .container-personajes{
+        height: 100%;
+    }
+}
+
+@media (max-width: 500px){
+    nav{
+      padding: 0 40px 0 50px;
+    }
+    .containerPersonajes{
+      grid-template-columns: repeat(1, 1fr);
+  } 
+  .container{
+    background-position: center;
+} 
+  }
